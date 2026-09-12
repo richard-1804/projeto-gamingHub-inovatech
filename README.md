@@ -1,4 +1,4 @@
-# Este REAMD é temporário.
+# Este README é temporário.
 # Não leve esse readme a sério (-mateus)
 
 # OBS: Cada um programe na sua branch
