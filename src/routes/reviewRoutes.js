@@ -1,0 +1,1 @@
+// Rotas de avaliações dos jogos.

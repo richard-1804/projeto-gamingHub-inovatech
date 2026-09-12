@@ -1,0 +1,1 @@
+// Lógica para criação e consulta de avaliações.

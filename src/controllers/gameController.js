@@ -1,0 +1,1 @@
+// Lógica do CRUD dos jogos utilizando o tratamento try/catch para capturar os erros disparados pelo .parse() do Zod.

@@ -1,0 +1,1 @@
+// Rotas para a entidade principal de jogos (GET /games, POST /games, GET /games/:id, etc.).

@@ -1,0 +1,1 @@
+// Schemas para validar o corpo (body) das requisições de login e registro.

@@ -1,0 +1,1 @@
+// Lógica de banco para Categorias (listar categorias, vincular ao jogo).

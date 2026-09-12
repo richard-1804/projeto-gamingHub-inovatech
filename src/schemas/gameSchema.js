@@ -1,0 +1,1 @@
+// Schemas para validar a criação/edição de jogos e validação dos parâmetros de URL (params.id).

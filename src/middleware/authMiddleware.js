@@ -1,0 +1,1 @@
+// Função que extrai o token do header Authorization: Bearer <TOKEN_JWT>, valida com jsonwebtoken e bloqueia requisições sem credencial com o status 401 Unauthorized.
