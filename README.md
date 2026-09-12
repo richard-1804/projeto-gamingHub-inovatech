@@ -1,4 +1,7 @@
-# Prisma ORM + Node.js 
+# Este REAMD é temporário.
+# Não leve esse readme a sério (-mateus)
+
+# OBS: Cada um programe na sua branch
 
 Através deste código você terá acesso a:
 
