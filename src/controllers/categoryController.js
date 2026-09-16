@@ -1,4 +1,4 @@
-import { createCategorySchema, idCategorySchema } from "../schemas/categorySchema";
+import { createCategorySchema, idCategorySchema } from "../schemas/categorySchema.js";
 import * as categoryModel from "../models/categoryModel.js";
 
 export const getCategories = async (req, res) => {
@@ -14,7 +14,7 @@ export const getCategoriesById = async (req, res) => {
     try {
         const {id} = req.params
 
-        const category = await categoryModel.getIdCategoriesModel
+        const category = await categoryModel.getIdCategoriesModel(id)
         if(!category){
             res.status(404).json({mensagem: "ID inexistente."})
         }
@@ -29,7 +29,7 @@ export const getCategoriesById = async (req, res) => {
 
 export const createCategories = async (req, res) => {
     try {
-        const validatedData = categorySchema.parse(req.body);
+        const validatedData = createCategorySchema.parse(req.body);
         const newCategory = await categoryModel.createCategoryModel(validatedData);
         return res.status(201).json(newCategory);
     } catch (error){
@@ -43,7 +43,7 @@ export const createCategories = async (req, res) => {
 export const updateCategories = async (req, res) => {
     try {
         const { id } = idCategorySchema.parse(req.params);
-        const validatedData = categorySchema.parse(req.body);
+        const validatedData = createCategorySchema.parse(req.body);
         const updatedCategory = await categoryModel.updateCategoryModel(id, validatedData)
         return res.status(201).json(updatedCategory)
     } catch (error){
@@ -56,7 +56,7 @@ export const updateCategories = async (req, res) => {
 
 export const deleteCategory = async (req, res) => {
     try {
-        const { id } = categoryIdSchema.parse(req.params);
+        const { id } = idCategorySchema.parse(req.params);
         await categoryModel.deleteCategoryModel(id);
         return res.status(200).json({ message: "Categoria removida com sucesso." });
     } catch (error) {

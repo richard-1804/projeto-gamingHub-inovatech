@@ -25,4 +25,31 @@ const pool = mariadb.createPool({
 const adapter = new PrismaMariaDb(pool); 
 const prisma = new PrismaClient({ adapter });
 
+
+// Buscar jogo por id no banco
+export async function findGameById(id) {
+  return await prisma.game.findUnique ({
+    where: {id: Number(id) }
+  });
+}
+
+
+// Atualizar dados de um jogo
+export async function updateGame(id,data) {
+  return await prisma.game.update({
+    where: {id: Number(id)},
+    data
+  });
+}
+
+// Deletar jogo do banco de dados
+export async function deleteGame(id) {
+  return await prisma.game.delete({
+    where: {id: Number(id)}
+  });
+}
+
+
 export default prisma;
+
+
