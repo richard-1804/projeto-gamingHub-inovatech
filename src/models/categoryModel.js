@@ -1,6 +1,6 @@
 // Lógica de banco para Categorias (listar categorias, vincular ao jogo).
 
-import prisma from "../db.js"
+import prisma from "../../db.js"
 
 export const getAllCategoriesModel = async () => {
     return await prisma.categories.findMany({
@@ -23,7 +23,7 @@ export const createCategoryModel = async (data) => {
 
 export const updateCategoryModel = async (id, data) => {
     return await prisma.categories.update({
-        where: {id_categories_pk: id}
+        where: {id_categories_pk: id}, 
         data
     })
 }

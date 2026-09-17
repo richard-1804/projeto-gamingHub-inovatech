@@ -1,9 +1,10 @@
 import { z } from 'zod'
 
 export const createCategorySchema = z.object({
-    name: z.string({required.error: "O nome é obrigatório."})
+    name: z.string({ message: "O nome é obrigatório." })
     .min(3, "O nome preicsa ter, no mínimo, 3 caracteres.")
-    .max(50, "O nome não deve sobrepor o limite máximo de 50 caracteres.");
+    .max(50, "O nome não deve sobrepor o limite máximo de 50 caracteres."),
+    
     description: z.string().optional()
 })
 
