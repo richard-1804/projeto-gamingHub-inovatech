@@ -31,6 +31,6 @@ export const idParamSchema = z.object({
 export const updateGameSchema = z.object({
   title: z.string().min(1, "O título não pode estar vazio").optional(),
   description: z.string().optional(),
-  year: z.coerce.number().int().optional(),
-  categoryId: z.coerce.number().int().optional()
+  release_year: z.coerce.number().int().optional(),
+  categories_id_fk: z.coerce.number().int().optional()
 });
