@@ -14,6 +14,7 @@ export const register = async (req, res) => {
       password: hashedPassword
     });
 
+    // Retorno original idêntico ao seu código
     return res.status(201).json(newUser);
   } catch (error) {
     return res.status(500).json({ message: "Erro interno no servidor" });
@@ -40,6 +41,7 @@ export const login = async (req, res) => {
       { expiresIn: '8h' }
     );
     
+    // Retorno original idêntico ao seu código
     return res.status(200).json({ token });
   } catch (error) {
     return res.status(500).json({ message: "Erro interno no servidor" });

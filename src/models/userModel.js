@@ -3,13 +3,13 @@
 import prisma from '../../db.js';
 
 export const findUserByEmail = async (email) => {
-  return await prisma.user.findUnique({
+  return await prisma.users.findUnique({
     where: { email }
   });
 };
 
 export const createUser = async (userData) => {
-  return await prisma.user.create({
+  return await prisma.users.create({
     data: userData,
     select: {
       id_users_pk: true, 
