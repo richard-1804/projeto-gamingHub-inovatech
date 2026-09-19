@@ -8,7 +8,7 @@ Aplicação full-stack para catálogo, avaliação e gestão de jogos.
 O projeto é dividido em **dois repositórios/pastas independentes**, que rodam como dois servidores separados e se comunicam via HTTP:
 
 ```
-gaming-hub-projeto/
+projeto-gamingHub-inovatech/
 ├── gaming-hub-backend/     → API REST (roda em http://localhost:3000)
 └── gaming-hub-frontend/    → Interface React (roda em http://localhost:5173)
 ```
